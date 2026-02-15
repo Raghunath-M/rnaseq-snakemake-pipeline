@@ -22,6 +22,7 @@ rule-specific conda environments.
 ## Usage
 ```bash
 snakemake --use-conda --cores 8
+```
 
 ## Configuration
 Edit `config.yaml` to set:
