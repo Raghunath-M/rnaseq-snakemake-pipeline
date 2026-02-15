@@ -1,0 +1,26 @@
+samples_dir: "data/fastq"
+
+#When switching to real data later, you will only change:
+#genome_fasta: /path/to/GRCh38.fa
+#gtf: /path/to/gencode.vXX.gtf
+#library:
+#  paired: true
+#  stranded: 2
+genome_fasta: "data/reference/genome.fa"
+gtf: "data/annotation/genes.gtf"
+star_index: "data/reference/star_index"
+
+library:
+  paired: false      # toy data = false, real RNA-seq = true
+  stranded: 0        # 0 = unstranded, 1 = stranded, 2 = reverse
+
+featurecounts:
+  feature: exon
+  attribute: gene_id
+
+threads:
+  fastqc: 2
+  trim: 4
+  star: 8
+  counts: 2
+
